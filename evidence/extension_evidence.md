@@ -1,16 +1,24 @@
 # Project Extension Evidence
 
-The supplied notebook set demonstrates a FastAPI service and TestClient
-contract, but the supplied outputs do not report a measured extension
-benefit/cost against a baseline.
+Chosen extension: **RUN_REQUIRED** (example: batch endpoint)
 
-Observed smoke evidence:
-- FastAPI app: BUILT
-- TestClient: PASS
-- Arabic request: 200
-- English request: 200
-- Empty input rejected: 422
-- Unsupported language rejected: 422
+## Baseline
+- latency: RUN_REQUIRED
+- throughput: RUN_REQUIRED
+- memory: RUN_REQUIRED
 
-**Status:** extension benefit/cost measurement remains unreported in the supplied
-evidence.
+## Extension
+- latency: RUN_REQUIRED
+- throughput: RUN_REQUIRED
+- memory: RUN_REQUIRED
+
+## Benefit
+RUN_REQUIRED
+
+## Cost
+RUN_REQUIRED
+
+## Conclusion
+RUN_REQUIRED
+
+The final README should link to this evidence after the measurements are produced.

@@ -1,25 +1,10 @@
 {
-  "result_type": "MEASURED_SMOKE",
-  "fastapi_testclient": "PASS",
-  "health_status": 200,
-  "arabic_status": 200,
-  "english_status": 200,
-  "empty_rejected": 422,
-  "unsupported_language_rejected": 422,
-  "canaries": [
-    {
-      "name": "arabic-contract",
-      "status": "PASS",
-      "label": "LABEL_1"
-    },
-    {
-      "name": "english-contract",
-      "status": "PASS",
-      "label": "LABEL_1"
-    }
-  ],
-  "onnx_fp32_prediction_agreement": 1.0,
-  "onnx_int8_prediction_agreement": 0.75,
-  "decision": "ADOPT_FOR_EXPERIMENT",
-  "note": "Notebook 08 explicitly requires a rerun with the project artifact for Gate D."
+  "status": "RUN_REQUIRED",
+  "onnx_fp32": {},
+  "onnx_int8": {},
+  "prediction_agreement": {},
+  "api_test": {},
+  "decision": "RUN_REQUIRED",
+  "reason": null,
+  "run_id": null
 }

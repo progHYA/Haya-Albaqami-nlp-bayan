@@ -1,12 +1,11 @@
 {
-  "result_type": "MEASURED_SMOKE",
-  "project_mode": false,
-  "artefact_role": "SMOKE_SYSTEMS",
-  "pytorch_p95_ms": 43.977,
-  "onnx_fp32_p95_ms": 27.258,
-  "onnx_int8_p95_ms": 11.916,
-  "fp32_prediction_agreement": 1.0,
-  "int8_prediction_agreement": 0.75,
-  "quality_tax_explicit": true,
-  "next_required": "RERUN_WITH_PROJECT_ARTIFACT_AND_FULL_WORKLOAD"
+  "status": "RUN_REQUIRED",
+  "project_mode": true,
+  "model_checkpoint": null,
+  "p50_ms": null,
+  "p95_ms": null,
+  "p99_ms": null,
+  "memory_mb": null,
+  "quality": null,
+  "run_id": null
 }

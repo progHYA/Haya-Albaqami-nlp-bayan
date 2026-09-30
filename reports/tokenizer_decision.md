@@ -1,15 +1,19 @@
 # Tokenizer Decision
 
-## Evidence available from the supplied notebook
-`01_text_processing_tokenization.ipynb` reports an mBERT tokenization example with
-12 tokens and confirms that the fast tokenizer is enabled.
+## Required project run
+This report must be filled from the actual Bayan project data.
 
-## Limitation
-The supplied notebook output does **not** contain a full two-tokenizer comparison
-over the Bayan corpus with fertility and truncation percentages. Therefore this
-file does not claim that such a corpus-level comparison was completed.
+Record for each tokenizer:
+- total tokens
+- fertility
+- number and percentage of truncated examples
+- maximum/selected sequence length
+- representative Arabic examples
 
 ## Decision
-Use the fast tokenizer implementation already exercised in the notebook for the
-measured smoke pipeline; a full corpus-level tokenizer decision remains a
-project-specific follow-up if required by the evaluator.
+**RUN_REQUIRED:** Select the tokenizer only after the comparison is executed on Bayan data.
+
+## Alternative
+Document the rejected tokenizer and the measured reason for rejection.
+
+Source requirement: the evaluation asks for a fertility/truncation comparison and a documented decision.

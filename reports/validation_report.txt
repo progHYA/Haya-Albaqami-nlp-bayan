@@ -1,5 +1,7 @@
 Submission validation report
-STATUS: NOT_RUN_IN_THIS_ENVIRONMENT
+STATUS: RUN_REQUIRED
 
-The supplied notebooks report their own core checks as PASS, but no actual
-validate_submission.py command output was provided in the supplied artifacts.
+Run:
+python validate_submission.py
+
+Replace this file with the actual command output before final submission.

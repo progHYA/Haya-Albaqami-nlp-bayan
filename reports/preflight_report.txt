@@ -1,5 +1,7 @@
 Submission preflight report
-STATUS: NOT_RUN_IN_THIS_ENVIRONMENT
+STATUS: RUN_REQUIRED
 
-No actual preflight_submission.py command output was provided in the supplied
-artifacts.
+Run:
+python preflight_submission.py
+
+Replace this file with the actual command output before final submission.

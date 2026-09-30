@@ -1,18 +1,13 @@
 # Attention / Padding Mask Check
 
-Source: `02_attention_transformers.ipynb`
+## Architecture trace
+Input → Embedding → Encoder layers → Task head
 
-- Model: `distilbert/distilbert-base-multilingual-cased`
-- Hidden state shape: `(2, 10, 768)`
-- Attention tensor: `(2, 12, 10, 10)`
-- Arabic tokens: `[CLS], ال, ##خدمة, لم, ت, ##ت, ##أ, ##خر, ., [SEP]`
-- Row-sum range: `0.9999998211860657` to `1.0`
-- `masked_positions_zero`: PASS
-- `actual_forward`: PASS
-
-## Architecture
-Input → Embedding → Transformer Encoder → Task Head.
+## Project-specific check
+**RUN_REQUIRED:** Add one Arabic sentence from the project, its tokenized form,
+padding positions, attention mask, and the observed masked/unmasked behavior.
 
 ## Interpretation limitation
-Attention weights are an internal weighting mechanism and should not be
-presented as causal explanations of a prediction.
+Attention weights should not be presented as causal explanations of model
+predictions. They describe an internal weighting mechanism and do not by
+themselves establish that a token caused the prediction.

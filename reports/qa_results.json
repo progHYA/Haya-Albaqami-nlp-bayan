@@ -1,0 +1,20 @@
+{
+  "result_type": "MEASURED_SMOKE",
+  "data_source": "github_course_file",
+  "model_id": "distilbert/distilbert-base-multilingual-cased",
+  "qa_steps": 3,
+  "qa_loss": 3.6450522740681968,
+  "valid_span": {
+    "answer": "الرياض",
+    "score": 8.5,
+    "start": 16,
+    "end": 22,
+    "null_margin": -8.5
+  },
+  "no_answer_test": {
+    "answer": null,
+    "reason": "no_answer_in_context",
+    "margin": 6.0
+  },
+  "post_processing_tests": "PASS"
+}

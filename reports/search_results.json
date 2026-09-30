@@ -1,0 +1,15 @@
+{
+  "result_type": "MEASURED_SMOKE",
+  "reranker_id": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+  "candidate_count": 6,
+  "answerable_test_queries": 6,
+  "mrr_at_3_before": 0.6666666666666666,
+  "mrr_at_3_after": 0.7222222222222223,
+  "mrr_at_3_delta": 0.05555555555555569,
+  "recall_at_3": 1.0,
+  "latency_before_ms": null,
+  "latency_after_ms": null,
+  "warmup_excluded": true,
+  "decision": "ADOPT_FOR_EXPERIMENT",
+  "latency_note": "Measured on CPU; exact latency values were not present in the supplied output."
+}

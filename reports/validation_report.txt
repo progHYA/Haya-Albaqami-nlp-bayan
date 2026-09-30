@@ -1,0 +1,5 @@
+Submission validation report
+STATUS: NOT_RUN_IN_THIS_ENVIRONMENT
+
+The supplied notebooks report their own core checks as PASS, but no actual
+validate_submission.py command output was provided in the supplied artifacts.

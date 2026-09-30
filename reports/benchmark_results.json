@@ -1,15 +1,12 @@
 {
-  "result_label": "SYSTEMS_SMOKE",
-  "artefact_role": "SYSTEMS_SMOKE",
-  "workload_rows": 8,
-  "device": "cpu",
-  "warmup": 5,
-  "repetitions": 30,
+  "result_type": "MEASURED_SMOKE",
+  "project_mode": false,
+  "artefact_role": "SMOKE_SYSTEMS",
   "pytorch_p95_ms": 43.977,
   "onnx_fp32_p95_ms": 27.258,
   "onnx_int8_p95_ms": 11.916,
-  "onnx_fp32_prediction_agreement": 1.0,
-  "onnx_int8_prediction_agreement": 0.75,
-  "onnx_fp32_selected_for_smoke_service": true,
-  "final_gate_d": "requires PROJECT_MODE=True"
+  "fp32_prediction_agreement": 1.0,
+  "int8_prediction_agreement": 0.75,
+  "quality_tax_explicit": true,
+  "next_required": "RERUN_WITH_PROJECT_ARTIFACT_AND_FULL_WORKLOAD"
 }

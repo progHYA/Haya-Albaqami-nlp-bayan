@@ -1,0 +1,6 @@
+example_id,case,expected,actual,error_type,evidence,proposed_fix,impact_rank
+EV-006,Gulf missing health result,health,transport,dialect_gap,Notebook 07 fixture,collect/review targeted Gulf examples,1
+EV-030,English missing lab result,health,transport,dialect_gap,Notebook 07 fixture,collect/review targeted Gulf/English contrastive examples,1
+EV-020,MSA bus route,transport,digital_service,class_confusion,Notebook 07 fixture,add contrastive examples and review label guide,2
+EV-019,fixture class-confusion case,,,class_confusion,Notebook 07 recommendation evidence,add contrastive examples and review label guide,2
+AMB-01,underspecified short request,,,hard_or_ambiguous,Notebook 07 taxonomy,request context or abstain when confidence is low,3

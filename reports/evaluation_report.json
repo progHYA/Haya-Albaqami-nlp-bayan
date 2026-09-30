@@ -1,0 +1,22 @@
+{
+  "result_type": "MEASURED_SMOKE_FIXTURE",
+  "macro_f1_estimate": 0.7819,
+  "bootstrap_95_ci": [
+    0.6112,
+    0.8962
+  ],
+  "paired_b_minus_a_difference": 0.0012,
+  "paired_95_ci": [
+    -0.1047,
+    0.0996
+  ],
+  "behavioural_passed": 3,
+  "behavioural_total": 6,
+  "pass_rate": 0.5,
+  "slices": {
+    "dialect_gap": 3,
+    "hard_or_ambiguous": 3,
+    "class_confusion": 2
+  },
+  "small_slice_flags_present": true
+}

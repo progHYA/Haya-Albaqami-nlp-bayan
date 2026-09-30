@@ -1,0 +1,3 @@
+tokenizer,source,split_tokens,total_tokens,fertility,truncated_examples,truncation_rate,notes
+mBERT,01_text_processing_tokenization.ipynb,12,12,1.0000,0,0.0,"Measured smoke example: مع معالجة اللغة الطبيعية مفيدة Natural language processing is useful"
+Fast tokenizer,01_text_processing_tokenization.ipynb,12,12,1.0000,0,0.0,"Fast tokenizer available; full Bayan comparison not reported"

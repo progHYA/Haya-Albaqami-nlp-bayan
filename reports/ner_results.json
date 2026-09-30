@@ -1,0 +1,19 @@
+{
+  "result_type": "MEASURED_SMOKE",
+  "data_source": "github_course_file",
+  "model_id": "distilbert/distilbert-base-multilingual-cased",
+  "device": "cpu",
+  "ner_steps": 48,
+  "ner_epochs": 12,
+  "ner_mean_loss": 0.862140710077559,
+  "entity_precision": 0.6666666666666666,
+  "entity_recall": 0.5,
+  "entity_f1": 0.5714285714285715,
+  "true_entities": 4,
+  "predicted_entities": 3,
+  "limitations": [
+    "synthetic tiny datasets",
+    "short training smoke",
+    "not a production estimate"
+  ]
+}

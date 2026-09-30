@@ -1,0 +1,5 @@
+Submission preflight report
+STATUS: NOT_RUN_IN_THIS_ENVIRONMENT
+
+No actual preflight_submission.py command output was provided in the supplied
+artifacts.

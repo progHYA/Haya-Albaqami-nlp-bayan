@@ -1,0 +1,4 @@
+category,count,evidence_boundary
+dialect_gap,3,COURSE_FIXTURE
+hard_or_ambiguous,3,COURSE_FIXTURE
+class_confusion,2,COURSE_FIXTURE

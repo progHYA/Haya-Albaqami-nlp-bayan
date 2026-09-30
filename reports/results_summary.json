@@ -1,0 +1,23 @@
+{
+  "result_type": "MEASURED_SMOKE",
+  "classification": {
+    "baseline_validation_macro_f1": 0.6666666667,
+    "transformer_validation_macro_f1": 1.0,
+    "transformer_test_macro_f1": 0.8666666667,
+    "transformer_test_accuracy": 0.875
+  },
+  "ner": {
+    "entity_precision": 0.6666666667,
+    "entity_recall": 0.5,
+    "entity_f1": 0.5714285714
+  },
+  "semantic_search": {
+    "recall_at_3": 1.0,
+    "mrr_at_3_before_reranking": 0.6666666667,
+    "mrr_at_3_after_reranking": 0.7222222222,
+    "reranking_delta": 0.0555555556,
+    "no_answer_validation_accuracy": 1.0,
+    "no_answer_test_accuracy": 1.0
+  },
+  "evidence_boundary": "course_fixture_or_smoke_not_project_quality"
+}

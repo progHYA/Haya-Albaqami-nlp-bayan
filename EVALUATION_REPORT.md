@@ -1,84 +1,84 @@
-# تقرير تقييم بيان | Bayan Evaluation Report
+# Evaluation Report — Bayan
 
-> انسخ هذا الملف إلى جذر مستودعك باسم `EVALUATION_REPORT.md`، ثم احذف التعليمات بين الأقواس واستبدل كل `TODO` بدليلك الفعلي.
+## Evidence scope
 
-## 1. نطاق التقرير
+This report is reconstructed from the supplied notebooks and the 2026-09-30 evaluation sheet. It deliberately distinguishes course-fixture/smoke measurements from missing project-artifact evidence.
 
-- تاريخ التشغيل: `TODO`
-- commit SHA: `TODO`
-- runtime/device: `TODO`
-- data version/hash: `TODO`
-- preprocessing profile/version/backend: `TODO`
-- model/checkpoint IDs: `TODO`
-- نوع الأرقام: `MEASURED_SMOKE / MEASURED / COURSE_FIXTURE` — اختر بدقة.
+## Classification
 
-## 2. العقود قبل القياس
+- Validation Macro-F1 baseline: **0.6667**
+- Validation Macro-F1 Transformer: **1.0000**
+- Validation delta: **+0.3333**
+- Test Macro-F1 Transformer: **0.8667**
+- Test accuracy Transformer: **0.8750**
 
-| العقد | الدليل | الحالة |
-|---|---|---|
-| لا PII حقيقية | `TODO` | PASS/PENDING |
-| train/validation/test بلا leakage | `TODO` | PASS/PENDING |
-| tokenizer/model متطابقان | `TODO` | PASS/PENDING |
-| Arabic profile متطابقة في train/index/query/serve | `TODO` | PASS/PENDING |
-| corpus/query embeddings مطبعة L2 | `TODO` | PASS/PENDING |
-| frozen test لم يستخدم في tuning | `TODO` | PASS/PENDING |
+Dataset: 40 course-fixture rows; train 24, validation 8, test 8; 20 groups; group overlap 0.
 
-## 3. نتائج المهام
+## NER / QA
 
-| المهمة | المقياس الرئيس | النتيجة | CI/تكرار | مجموعة القياس |
-|---|---|---:|---|---|
-| Classification | Macro-F1 | `TODO` | `TODO` | `TODO` |
-| NER | strict entity F1 | `TODO` | `TODO` | `TODO` |
-| QA | EM/F1 + no-answer | `TODO` | `TODO` | `TODO` |
-| Retrieval | Recall@k / MRR@k | `TODO` | `TODO` | `TODO` |
+NER smoke:
 
-## 4. شرائح التقييم
+- entity precision: 0.6667
+- entity recall: 0.5000
+- entity F1: 0.5714
+- true entities: 4
+- predicted entities: 3
 
-| المهمة | الشريحة | n | metric | 95% CI | التحذير/التفسير |
-|---|---|---:|---:|---|---|
-| `TODO` | `language=ar` | `TODO` | `TODO` | `TODO` | `TODO` |
-| `TODO` | `language=en` | `TODO` | `TODO` | `TODO` | `TODO` |
-| `TODO` | `variant=Gulf` | `TODO` | `TODO` | `TODO` | `TODO` |
-| `TODO` | `length=long` | `TODO` | `TODO` | `TODO` | `TODO` |
+QA smoke:
 
-## 5. مقارنة الإصدارات
+- optimizer steps: 3
+- mean loss: 3.6451
+- valid-span test returned `الرياض`
+- no-answer test returned no answer with margin 6.0
 
-- Model A: `TODO`
-- Model B: `TODO`
-- observed difference B−A: `TODO`
-- paired 95% CI: `TODO`
-- القرار المهني: `TODO — هل تدعم CI ادعاءً اتجاهيًا؟ وهل الفرق مهم عمليًا؟`
+These are smoke tests, not production quality estimates.
 
-## 6. Behavioural tests
+## Semantic search
 
-| النوع | passed/total | pass rate | فشل مهم |
-|---|---:|---:|---|
-| invariance | `TODO` | `TODO` | `TODO` |
-| directional | `TODO` | `TODO` | `TODO` |
-| minimum functionality | `TODO` | `TODO` | `TODO` |
+- corpus vectors: 24
+- embedding dimension: 384
+- Recall@3: 1.0000
+- MRR@3: 0.6667
+- cross-lingual slice Recall@3: 1.0000, n=2
+- reranked MRR@3: 0.7222
+- reranking delta: +0.0556
+- threshold validation accuracy: 1.0000
+- frozen test no-answer accuracy: 1.0000
 
-## 7. تحليل الأخطاء
+## Evaluation fixture
 
-- المصدر: validation + behavioural failures فقط.
-- عدد الأخطاء المقروءة يدويًا: `TODO`
-- رابط worksheet داخل المستودع: `TODO`
+Macro-F1 fixture:
 
-| taxonomy tag | count | مثال آمن مختصر | الفرضية |
-|---|---:|---|---|
-| `TODO` | `TODO` | `TODO` | `TODO` |
+- estimate: 0.7819
+- 95% bootstrap CI: 0.6112–0.8962
+- paired B−A difference: +0.0012
+- paired 95% CI: −0.1047–0.0996
 
-## 8. الإصلاحات الثلاثة ذات الأولوية
+The paired interval includes zero, so the supplied fixture does not support a directional superiority claim.
 
-| الأولوية | الدليل | الإجراء | metric/slice المتوقع | الكلفة | اختبار عدم الرجوع |
-|---:|---|---|---|---|---|
-| 1 | `TODO` | `TODO` | `TODO` | `TODO` | `TODO` |
-| 2 | `TODO` | `TODO` | `TODO` | `TODO` | `TODO` |
-| 3 | `TODO` | `TODO` | `TODO` | `TODO` | `TODO` |
+Slices included Arabic, English, Gulf, MSA, English variant, and short/long length buckets. Small slices were explicitly flagged.
 
-## 9. ما الذي لا تثبته النتائج؟
+## Error taxonomy
 
-- `TODO: حجم العينة/التمثيل/بيئة التشغيل/الزمن/المجالات غير المغطاة.`
+Course fixture only:
 
-## 10. خلاصة للإدارة
+| Category | Count |
+|---|---:|
+| dialect_gap | 3 |
+| hard_or_ambiguous | 3 |
+| class_confusion | 2 |
 
-`TODO: فقرتان فقط — ما الذي يعمل، أين الضعف، وما القرار التالي المدعوم بالدليل.`
+The final project report must replace these with manually reviewed errors from the student's actual model.
+
+## Missing final evidence
+
+The evaluation requires:
+
+- project-specific Macro-F1/entity-F1/no-answer metrics
+- project semantic-search reports before/after reranking
+- project error examples and three fixes
+- completed model/data cards
+- project benchmark with p50/p95/p99, throughput, memory and quality tax
+- project ONNX/INT8 decision
+- measured extension
+- validator/preflight reports

@@ -1,29 +1,25 @@
-# PRESENTATION — Bayan | عرض بيان
+# PRESENTATION
 
-**GitHub username / معرف المتدرب:** FILL_ME
+## Slide 1 — Bayan Applied NLP
+Haya Albaqami — Applied NLP project.
 
-## 1. Problem and user | المشكلة والمستخدم
-FILL_ME: user, input, scope and non-goals / المستخدم والمدخل والنطاق والحدود.
+## Slide 2 — Pipeline
+Arabic/English text → privacy/preprocessing → tokenization/embeddings → task models → evaluation → optimized serving.
 
-## 2. Architecture | المعمارية
-FILL_ME: link to your README architecture and explain data flow / رابط المعمارية وتدفق البيانات.
+## Slide 3 — Current measured evidence
+Classification, NER/QA, semantic search and systems benchmarks are currently documented as course-fixture/smoke evidence.
 
-## 3. Demonstration | التطبيق
-- Arabic example + output evidence: FILL_ME
-- English example + output evidence: FILL_ME
-- No-answer / invalid-input case: FILL_ME
-- Saved fallback from the same submission, if available: FILL_ME
+## Slide 4 — Arabic NLP
+Named preprocessing profile, PII masking, conservative display/model separation, and model comparison smoke.
 
-## 4. Measured evidence | الدليل المقاس
-- Quality metric, data split and report: FILL_ME
-- Performance metric, environment and report: FILL_ME
-- Measurement label and limits: FILL_ME
+## Slide 5 — Semantic search
+FAISS retrieval with multilingual embeddings, thresholding and reranking. Smoke MRR improved from 0.6667 to 0.7222.
 
-## 5. Decision and ownership | القرار والمساهمة
-- My change / measured extension and file: FILL_ME
-- Baseline, benefit/cost and limitation: FILL_ME
-- One code decision I can explain: FILL_ME
+## Slide 6 — Evaluation
+Bootstrap confidence intervals, paired comparison, slices and behavioural tests are implemented.
 
-The talk is five minutes plus two minutes of individual verification; up to five slides or equivalent. Presentation credit is 10 within the total of 100. Optional slides may be linked here; no paid tool is required.
+## Slide 7 — Serving
+ONNX FP32 parity passed; INT8 reduced p95 latency in the smoke workload but had 0.75 prediction agreement, so it did not meet the smoke quality budget.
 
-العرض خمس دقائق ودقيقتان للتحقق الفردي، بخمس شرائح كحد أقصى أو ما يعادلها. درجة العرض 10 ضمن المجموع 100. يمكن ربط شرائح اختيارية هنا؛ لا تحتاج أداة مدفوعة.
+## Slide 8 — Finalization
+Project-specific reruns, error analysis, Gate D benchmark and submission validation are still required.

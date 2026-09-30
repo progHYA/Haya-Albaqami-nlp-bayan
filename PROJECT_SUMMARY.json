@@ -1,0 +1,20 @@
+{
+  "student": "Haya Albaqami",
+  "repository": "https://github.com/progHYA/Haya-Albaqami-nlp-bayan",
+  "evaluation_date": "2026-09-30",
+  "evidence_policy": "Smoke/course-fixture results are not promoted to project-quality claims.",
+  "current_results": {
+    "classification_validation_macro_f1_baseline": 0.6667,
+    "classification_validation_macro_f1_transformer": 1.0,
+    "classification_test_macro_f1_transformer": 0.8667,
+    "classification_test_accuracy_transformer": 0.875,
+    "ner_entity_f1_smoke": 0.5714285714,
+    "semantic_recall_at_3_smoke": 1.0,
+    "semantic_mrr_at_3_before_rerank_smoke": 0.6666666667,
+    "semantic_mrr_at_3_after_rerank_smoke": 0.7222222222,
+    "onnx_fp32_p95_ms_smoke": 27.258,
+    "onnx_int8_p95_ms_smoke": 11.916,
+    "onnx_int8_prediction_agreement_vs_fp32": 0.75
+  },
+  "gate_d_status": "REQUIRES_PROJECT_ARTIFACT_RERUN"
+}

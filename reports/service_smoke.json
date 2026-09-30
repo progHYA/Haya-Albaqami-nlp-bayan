@@ -1,0 +1,20 @@
+{
+  "health": 200,
+  "arabic": 200,
+  "english": 200,
+  "empty_rejected": 422,
+  "unsupported_language_rejected": 422,
+  "canaries": [
+    {
+      "name": "arabic-contract",
+      "status": "PASS",
+      "label": "LABEL_1"
+    },
+    {
+      "name": "english-contract",
+      "status": "PASS",
+      "label": "LABEL_1"
+    }
+  ],
+  "evidence_boundary": "SYSTEMS_SMOKE"
+}
